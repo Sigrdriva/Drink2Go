@@ -9,25 +9,234 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
-    <header class="header">
-      <nav></nav>
+    <header class="main-header">
+      <div class="main-header__wrapper">
+        <a class="main-header__logo logo" href="#">
+          <picture>
+            <!-- add picture -->
+          </picture>
+        </a>
+      </div>
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <ul class="main-nav__list site-list">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <ul class="main-nav__list user-list">
+          <li class="user-list__login">Войти</li>
+          <li class="user-list__basket">Корзина</li>
+        </ul>
+      </nav>
+      <button class="main-header__toggle main-header__toggle--closed main-header__toggle--nojs" type="button"><span class="visually-hidden">Открыть меню</span></button>
     </header>
-    <main></main>
+    <main class="main-container">
+      <h1 class="visually-hidden">Кофейные напитки Drink2Go</h1>
+
+      <section class="slider">
+        <ul class="slider-list">
+          <li class="slider-list__item slider-list__item--flat-white">
+            <h2 class="slider-list__title">Декаф Флэт Уайт</h2>
+            <p class="slider-list__feature">Новинка!</p>
+            <p class="slider-list__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+            <p class="slider-list__price"><span class="slider-list__price--old">295₽</span>225₽</p>
+            <a class="slider-list__order button" href="#">Заказать</a>
+          </li>
+          <li class="slider-list__item slider-list__item--lavander"></li>
+          <li class="slider-list__item slider-list__item--espresso"></li>
+        </ul>
+      </section>
+
+      <section class="advantages">
+        <p class="advantages__subtitle">Преимущества</p>
+        <h2 class="advantages__title">Главные причины выбрать Drink2Go</h2>
+        <ul class="advantages__list">
+          <li class="advantages__item advantages__item--speed">
+            <h3 class="advantages__subtitle">Скорость</h3>
+            <p class="advantages__description">Готовый напиток всегда под рукой — просто открой банку</p>
+          </li>
+          <li class="advantages__item advantages__item--comfortable">
+            <h3 class="advantages__subtitle">Удобство</h3>
+            <p class="advantages__description">Легко помещается и в карман,
+              и в маленькую сумочку</p>
+          </li>
+          <li class="advantages__item advantages__item--cheerfulness">
+            <h3 class="advantages__subtitle">Бодрость</h3>
+            <p class="advantages__description">Сбалансированная доза кофеина даст мощный заряд энергии</p>
+          </li>
+          <li class="advantages__item advantages__item--ecology">
+            <h3 class="advantages__subtitle">Экологичность</h3>
+            <p class="advantages__description">Вся упаковка сделана
+              из перерабатываемых материалов</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="form">
+        <p class="form__subtitle">Каталог</p>
+        <h2 class="form__title">Каталог кофейных напитков</h2>
+        <form class="form__filter filter" action="https://echo.htmlacademy.ru/" method="get">
+          <fieldset class="filter__group">
+            <legend class="filter__title">
+              <span>Цена</span>
+              <span class="filter__range-input">
+                <label class="filter__label">
+                  <input class="filter__range-input" type="number" value="0" name="min-price">
+                </label>
+                <label class="filter__label">
+                  <input class="filter__range-input" type="number" value="123" name="max-price">
+                </label>
+              </span>
+            </legend>
+            <div class="filter__range range">
+              <div class="range__wrapper">
+                <div class="range__scale">
+                  <div class="range__bar" style="left: 32px; width: 72px">
+                    <button class="range__toggle range__toggle--min" type="button">
+                      <span class="visually-hidden">Изменить минимальную цену.</span>
+                    </button>
+                    <button class="range__toggle range__toggle--max" type="button">
+                      <span class="visually-hidden">Изменить максимальную цену.</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="filter__group">
+            <legend class="filter__title">Наличие молока</legend>
+            <ul class="filter__list">
+              <li class="filter__item">
+                <label class="filter__control control">
+                  <input class="visually-hidden control__input" type="radio" name="has-milk" value="all" checked>
+                    <svg class="control__mark control__mark--checked" width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8" fill="#7859CF"/></svg>
+                    <svg class="control__mark control__mark--nochecked" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#fff" stroke="#7859CF" stroke-width="2"/></svg>
+                    <span class="control__label">Неважно</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__control control">
+                  <input class="visually-hidden control__input" type="radio" name="has-milk" value="animal-milk">
+                    <svg class="control__mark control__mark--checked" width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8" fill="#7859CF"/></svg>
+                    <svg class="control__mark control__mark--nochecked" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#fff" stroke="#7859CF" stroke-width="2"/></svg>
+                    <span class="control__label">Только животное</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__control control">
+                  <input class="visually-hidden control__input" type="radio" name="has-milk" value="vegetable-milk">
+                    <svg class="control__mark control__mark--checked" width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8" fill="#7859CF"/></svg>
+                    <svg class="control__mark control__mark--nochecked" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#fff" stroke="#7859CF" stroke-width="2"/></svg>
+                    <span class="control__label">Только растительное</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__control control">
+                  <input class="visually-hidden control__input" type="radio" name="has-milk" value="without-milk" disabled>
+                    <svg class="control__mark control__mark--checked" width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8" fill="#7859CF"/></svg>
+                    <svg class="control__mark control__mark--nochecked" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#fff" stroke="#7859CF" stroke-width="2"/></svg>
+                    <span class="control__label">Без молока</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="filter__group">
+            <legend class="filter__title">Страна произрастания</legend>
+            <ul class="filter__list">
+              <li class="filter__item">
+                <label class="filter__control control">
+                  <input class="visually-hidden control__input" type="checkbox" name="Brazil" checked>
+                  <svg class="control__mark control__mark--checked" width="42" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 42 24"><rect width="42" height="24" fill="#7859CF" rx="12"/><circle cx="30" cy="12" r="10" fill="#fff"/></svg>
+                  <svg class="control__mark control__mark--nochecked" width="42" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 42 24"><rect width="42" height="24" fill="#BDBDBD" rx="12"/><circle cx="12" cy="12" r="10" fill="#fff"/></svg>
+                  <span class="control__label">Бразилия</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__control control">
+                  <input class="visually-hidden control__input" type="checkbox" name="Ethiopia">
+                  <svg class="control__mark control__mark--checked" width="42" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 42 24"><rect width="42" height="24" fill="#7859CF" rx="12"/><circle cx="30" cy="12" r="10" fill="#fff"/></svg>
+                  <svg class="control__mark control__mark--nochecked" width="42" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 42 24"><rect width="42" height="24" fill="#BDBDBD" rx="12"/><circle cx="12" cy="12" r="10" fill="#fff"/></svg>
+                  <span class="control__label">Эфиопия</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__control control">
+                  <input class="visually-hidden control__input" type="checkbox" name="Colombia">
+                  <svg class="control__mark control__mark--checked" width="42" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 42 24"><rect width="42" height="24" fill="#7859CF" rx="12"/><circle cx="30" cy="12" r="10" fill="#fff"/></svg>
+                  <svg class="control__mark control__mark--nochecked" width="42" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 42 24"><rect width="42" height="24" fill="#BDBDBD" rx="12"/><circle cx="12" cy="12" r="10" fill="#fff"/></svg>
+                  <span class="control__label">Колумбия</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__control control">
+                  <input class="visually-hidden control__input" type="checkbox" name="Costa-Rica">
+                  <svg class="control__mark control__mark--checked" width="42" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 42 24"><rect width="42" height="24" fill="#7859CF" rx="12"/><circle cx="30" cy="12" r="10" fill="#fff"/></svg>
+                  <svg class="control__mark control__mark--nochecked" width="42" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 42 24"><rect width="42" height="24" fill="#BDBDBD" rx="12"/><circle cx="12" cy="12" r="10" fill="#fff"/></svg>
+                  <span class="control__label">Коста-Рика</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__control control">
+                  <input class="visually-hidden control__input" type="checkbox" name="Peru" disabled>
+                  <svg class="control__mark control__mark--checked" width="42" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 42 24"><rect width="42" height="24" fill="#7859CF" rx="12"/><circle cx="30" cy="12" r="10" fill="#fff"/></svg>
+                  <svg class="control__mark control__mark--nochecked" width="42" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 42 24"><rect width="42" height="24" fill="#BDBDBD" rx="12"/><circle cx="12" cy="12" r="10" fill="#fff"/></svg>
+                  <span class="control__label">Перу</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="filter__button button" type="submit">Применить</button>
+          <button class="filter__button button button--reset" type="reset">Сбросить</button>
+        </form>
+      </section>
+
+      <section class="catalog">
+        <form class="catalog__filter" action="https://echo.htmlacademy.ru/" method="get">
+          <fieldset class="catalog__group">
+            <legend class="catalog__title">Сортировка:</legend>
+            <select class="catalog__select-control" aria-label="Сортировка">
+              <option value="default">по умолчанию</option>
+              <option value="expensive">сначала дорогие</option>
+              <option value="cheap">сначала дешёвые</option>
+              <option value="rating">высокий рейтинг</option>
+            </select>
+          </fieldset>
+        </form>
+        <ul class="catalog__list">
+          <li class="catalog__item">
+            <section class="product-card">
+              <a class="product-card__link" href="#">
+                <picture>
+                  <!-- вставить картинки -->
+                  <source>
+                </picture>
+              </a>
+              <div class="product-card__content">
+                <div class="product-card__content-wrapper">
+                  <a class="product-card__link" href="#">
+                    <h2 class="product-card__title">Декаф Флэт Уайт</h2>
+                  </a>
+                  <p class="product-card__description">Кофе без кофеина из Эфиопии
+                    с натуральным фермерским молоком</p>
+                </div>
+                <footer class="product-card__footer">
+                  <p class="product-card__price">225₽</p>
+                  <a class="product-card__button" href="#">
+                    <!-- изменить иконку -->
+                    <svg class="product-card__icon" width="21" height="18" viewBox="0 0 21 18"><use href="./img/sprite.svg#basket-icon"></use></svg>
+                    <span class="visually-hidden">В корзину</span>
+                  </a>
+                </footer>
+              </div>
+            </section>
+          </li>
+        </ul>
+      </section>
+    </main>
     <footer></footer>
     <script src="./js/script.js" defer></script>
   </body>
 </html>
-
-
-[{
-	"resource": "/c:/Users/Маришка/Documents/HTML Academy/Drink2Go/source/index.html",
-	"owner": "stylelint",
-	"code": "CssSyntaxError",
-	"severity": 8,
-	"message": "Unknown word (CssSyntaxError)",
-	"source": "stylelint",
-	"startLineNumber": 1,
-	"startColumn": 1,
-	"endLineNumber": 1,
-	"endColumn": 1
-}]
