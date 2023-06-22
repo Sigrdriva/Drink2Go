@@ -1,0 +1,70 @@
+.main-nav__toggle {
+  display: none;
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav__toggle {
+    display: block;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    display: block;
+    width: 12px;
+    height: 12px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 24px;
+  }
+
+  .main-nav__toggle--closed {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 24px;
+      left: 10px;
+      width: 16px;
+      height: 2px;
+      background-color: #333333;
+      box-shadow: 0 5px 0 0 #333333, 0 10px 0 #333333;
+    }
+
+    &:active::before {
+      background-color: fade(#333333, 60%);
+      box-shadow:
+        0 5px 0 0 fade(#333333, 60%),
+        0 10px 0 0 fade(#333333, 60%);
+    }
+  }
+
+  .main-nav__toggle--opened {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 29px;
+      left: 10px;
+      width: 16px;
+      height: 2px;
+      background-color: #333333;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &:active::before,
+    &:active::after {
+      background-color: fade(#333333, 60%);
+    }
+  }
+
+  .main-nav__toggle--nojs {
+    display: none;
+  }
+}

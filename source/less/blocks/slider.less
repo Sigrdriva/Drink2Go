@@ -1,0 +1,54 @@
+.slider {
+  background-color: #f3ebe1;
+  background-repeat: no-repeat;
+  background-position: center 20px;
+  padding: 20px;
+  padding-top: 310px;
+  padding-bottom: 60px;
+}
+
+.slider__feature {
+  .font-style-subtitle;
+}
+
+.slider__title {
+  .font-style-title(700, 36px, 48px);
+  text-align: center;
+  margin: 0px;
+  margin-bottom: 10px;
+  letter-spacing: 0.72px;
+}
+
+.slider__description {
+  .font-style;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.slider__item-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.slider__price {
+  .font-style-title(600, 20px, 32px);
+  margin: 0;
+}
+
+.slider__price--old {
+  .font-style(400, 16px, 32px, @base-color);
+  margin-right: 6px;
+  text-decoration: line-through;
+}
+
+@media (max-width: @mobile-width-only) {
+  .slider {
+    background-image: url(../../img/hero-flat-white-mobile.png);
+      @media (min-resolution: 2dppx) {
+        background-image: url(../../img/hero-flat-white-mobile@2x.png);
+      }
+    }
+  }
