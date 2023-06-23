@@ -395,33 +395,35 @@
       </section>
 
       <section class="map">
-        <h2 class="map__title visually-hidden">Карта</h2>
-        <!-- add map and img -->
+        <h2 class="map__title visually-hidden">Карта. Санкт-Петербург, набережная реки Карповки, дом 5.</h2>
         <div class="map__wrapper"></div>
       </section>
     </main>
     <footer class="main-footer">
       <div class="main-footer__wrapper">
         <a class="main-footer__logo logo" href="#">
-          <!-- svg with logo -->
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/logo-large.svg" width="170">
+            <img class="logo__image" src="img/logo-medium.svg" alt="Кофейные напитки 'Drink2Go'" width="82" height="36">
+          </picture>
         </a>
         <ul class="main-footer__social social">
           <li class="social__item">
             <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Мы в Вконтакте</span>
-              <!-- <svg class="social__icon" width="27" height="18" viewBox="0 0 27 18"><use href="./img/sprite.svg#vkontakte-icon" /></svg> -->
+              <svg class="social__icon" width="20" height="20" viewBox="0 0 20 20"><use href="./img/icons/stack.svg#vk-icon" /></svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--pinterest" href="№">
               <span class="visually-hidden">Мы в Пинтересте</span>
-              <!-- <svg class="social__icon" width="24" height="20" viewBox="0 0 24 20"><use href="./img/sprite.svg#youtube-icon" /></svg> -->
+              <svg class="social__icon" width="20" height="20" viewBox="0 0 20 20"><use href="./img/icons/stack.svg#pinterest-icon" /></svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--ok" href="#">
               <span class="visually-hidden">Мы в Одноклассниках</span>
-              <!-- <svg class="social__icon" width="20" height="18" viewBox="0 0 20 18"><use href="./img/sprite.svg#telegram-icon" /></svg> -->
+              <svg class="social__icon" width="20" height="20" viewBox="0 0 20 20"><use href="./img/icons/stack.svg#ok-icon" /></svg>
             </a>
           </li>
         </ul>
@@ -430,17 +432,17 @@
       <section class="navigation">
         <h2 class="navigation__title">Интернет-магазин</h2>
         <ul class="navigation__list">
-          <li class="naigation__item">
-            <a class="naigation__link" href="#">Каталог</a>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Каталог</a>
           </li>
-          <li class="naigation__item">
-            <a class="naigation__link" href="#">Доставка</a>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Доставка</a>
           </li>
-          <li class="naigation__item">
-            <a class="naigation__link" href="#">Способы оплаты</a>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Способы оплаты</a>
           </li>
-          <li class="naigation__item">
-            <a class="naigation__link" href="#">О нас</a>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">О нас</a>
           </li>
         </ul>
       </section>
@@ -464,16 +466,19 @@
         <h2 class="contacts__title">Контакты</h2>
         <address class="contacts__address">
           Санкт-Петербург, набережная реки Карповки, дом 5
+          <svg class="contacts__icon" width="13" height="16" viewBox="0 0 13 16"><use href="./img/icons/stack.svg#address-icon" /></svg>
         </address>
         <address class="contacts__phone">
           <a class="contacts__phone-link" href="tel:+79999999999">+7 (999) 999-99-99</a>
+          <svg class="contacts__icon" width="13" height="16" viewBox="0 0 13 16"><use href="./img/icons/stack.svg#phone-icon" /></svg>
         </address>
       </section>
 
       <div class="main-footer__copyright copyright">
+        <span class="copyright__text">Разработано в</span>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          Разработано в HTML Academy
-          <!-- <svg class="copyright__icon" width="27" height="35" viewBox="0 0 27 35"><use href="./img/sprite.svg#copyright-icon" /></svg> -->
+          HTML Academy
+          <svg class="copyright__icon" width="12" height="16" viewBox="0 0 12 16"><use href="./img/icons/stack.svg#copyright-icon" /></svg>
         </a>
       </div>
 
