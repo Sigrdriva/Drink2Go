@@ -1,0 +1,43 @@
+.range__wrapper {
+  position: relative;
+  width: 280px;
+  height: 24px;
+}
+
+.range__scale {
+  position: absolute;
+  top: 12px;
+  left: 2px;
+  width: 280px;
+  height: 2px;
+  background-color: #e2e2e2;
+  border-radius: 2px;
+}
+
+.range__bar {
+  position: absolute;
+  left: 32px;
+  top: -1px;
+  height: 4px;
+  background-color: @form-color;
+}
+
+.range__toggle {
+  position: absolute;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  background: #ffffff;
+  border: 2px solid @form-color;
+  border-radius: 50%;
+  cursor: pointer;
+  top: -10px;
+
+  &--min {
+    left: -2px;
+  }
+
+  &--max {
+    left: 234px;
+  }
+}

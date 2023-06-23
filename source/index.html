@@ -104,19 +104,11 @@
           <fieldset class="filter__group">
             <legend class="filter__title">
               <span>Цена</span>
-              <span class="filter__range-input">
-                <label class="filter__label">
-                  <input class="filter__range-input" type="number" value="0" name="min-price">
-                </label>
-                <label class="filter__label">
-                  <input class="filter__range-input" type="number" value="123" name="max-price">
-                </label>
-              </span>
             </legend>
             <div class="filter__range range">
               <div class="range__wrapper">
                 <div class="range__scale">
-                  <div class="range__bar" style="left: 32px; width: 72px">
+                  <div class="range__bar" style="left: 3px; width: 241px">
                     <button class="range__toggle range__toggle--min" type="button">
                       <span class="visually-hidden">Изменить минимальную цену.</span>
                     </button>
@@ -127,115 +119,105 @@
                 </div>
               </div>
             </div>
+            <div class="filter__range-wrapper-input">
+              <label class="filter__label filter__label--min-price">
+                <input class="filter__range-input" type="number" value="0" name="min-price">
+              </label>
+              <label class="filter__label">
+                <input class="filter__range-input" type="number" value="123" name="max-price">
+              </label>
+            </div>
           </fieldset>
 
           <fieldset class="filter__group">
             <legend class="filter__title">Наличие молока</legend>
             <ul class="filter__list">
               <li class="filter__item">
-                <label class="filter__control control">
-                  <input class="visually-hidden control__input" type="radio" name="has-milk" value="all" checked>
-                    <svg class="control__mark control__mark--checked" width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8" fill="#7859CF"/></svg>
-                    <svg class="control__mark control__mark--nochecked" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#fff" stroke="#7859CF" stroke-width="2"/></svg>
-                    <span class="control__label">Неважно</span>
+                <label class="filter__radiobutton radiobutton">
+                  <input class="visually-hidden radiobutton__input" type="radio" name="has-milk" value="all" checked>
+                  <span class="radiobutton__label">Неважно</span>
                 </label>
               </li>
               <li class="filter__item">
-                <label class="filter__control control">
-                  <input class="visually-hidden control__input" type="radio" name="has-milk" value="animal-milk">
-                    <svg class="control__mark control__mark--checked" width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8" fill="#7859CF"/></svg>
-                    <svg class="control__mark control__mark--nochecked" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#fff" stroke="#7859CF" stroke-width="2"/></svg>
-                    <span class="control__label">Только животное</span>
+                <label class="filter__radiobutton radiobutton">
+                  <input class="visually-hidden radiobutton__input" type="radio" name="has-milk" value="animal-milk">
+                  <span class="radiobutton__label">Только животное</span>
                 </label>
               </li>
               <li class="filter__item">
-                <label class="filter__control control">
-                  <input class="visually-hidden control__input" type="radio" name="has-milk" value="vegetable-milk">
-                    <svg class="control__mark control__mark--checked" width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8" fill="#7859CF"/></svg>
-                    <svg class="control__mark control__mark--nochecked" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#fff" stroke="#7859CF" stroke-width="2"/></svg>
-                    <span class="control__label">Только растительное</span>
+                <label class="filter__radiobutton radiobutton">
+                  <input class="visually-hidden radiobutton__input" type="radio" name="has-milk" value="vegetable-milk">
+                  <span class="radiobutton__label">Только растительное</span>
                 </label>
               </li>
               <li class="filter__item">
-                <label class="filter__control control">
-                  <input class="visually-hidden control__input" type="radio" name="has-milk" value="without-milk" disabled>
-                    <svg class="control__mark control__mark--checked" width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8" fill="#7859CF"/></svg>
-                    <svg class="control__mark control__mark--nochecked" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#fff" stroke="#7859CF" stroke-width="2"/></svg>
-                    <span class="control__label">Без молока</span>
+                <label class="filter__radiobutton radiobutton">
+                  <input class="visually-hidden radiobutton__input" type="radio" name="has-milk" value="without-milk" disabled>
+                  <span class="radiobutton__label">Без молока</span>
                 </label>
               </li>
             </ul>
           </fieldset>
 
-          <fieldset class="filter__group">
+          <fieldset class="filter__group filter__group--country">
             <legend class="filter__title">Страна произрастания</legend>
             <ul class="filter__list">
               <li class="filter__item">
                 <label class="filter__control control">
                   <input class="visually-hidden control__input" type="checkbox" name="Brazil" checked>
-                  <svg class="control__mark control__mark--checked" width="42" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 42 24"><rect width="42" height="24" fill="#7859CF" rx="12"/><circle cx="30" cy="12" r="10" fill="#fff"/></svg>
-                  <svg class="control__mark control__mark--nochecked" width="42" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 42 24"><rect width="42" height="24" fill="#BDBDBD" rx="12"/><circle cx="12" cy="12" r="10" fill="#fff"/></svg>
                   <span class="control__label">Бразилия</span>
                 </label>
               </li>
               <li class="filter__item">
                 <label class="filter__control control">
                   <input class="visually-hidden control__input" type="checkbox" name="Ethiopia">
-                  <svg class="control__mark control__mark--checked" width="42" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 42 24"><rect width="42" height="24" fill="#7859CF" rx="12"/><circle cx="30" cy="12" r="10" fill="#fff"/></svg>
-                  <svg class="control__mark control__mark--nochecked" width="42" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 42 24"><rect width="42" height="24" fill="#BDBDBD" rx="12"/><circle cx="12" cy="12" r="10" fill="#fff"/></svg>
                   <span class="control__label">Эфиопия</span>
                 </label>
               </li>
               <li class="filter__item">
                 <label class="filter__control control">
                   <input class="visually-hidden control__input" type="checkbox" name="Colombia">
-                  <svg class="control__mark control__mark--checked" width="42" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 42 24"><rect width="42" height="24" fill="#7859CF" rx="12"/><circle cx="30" cy="12" r="10" fill="#fff"/></svg>
-                  <svg class="control__mark control__mark--nochecked" width="42" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 42 24"><rect width="42" height="24" fill="#BDBDBD" rx="12"/><circle cx="12" cy="12" r="10" fill="#fff"/></svg>
                   <span class="control__label">Колумбия</span>
                 </label>
               </li>
               <li class="filter__item">
                 <label class="filter__control control">
                   <input class="visually-hidden control__input" type="checkbox" name="Costa-Rica">
-                  <svg class="control__mark control__mark--checked" width="42" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 42 24"><rect width="42" height="24" fill="#7859CF" rx="12"/><circle cx="30" cy="12" r="10" fill="#fff"/></svg>
-                  <svg class="control__mark control__mark--nochecked" width="42" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 42 24"><rect width="42" height="24" fill="#BDBDBD" rx="12"/><circle cx="12" cy="12" r="10" fill="#fff"/></svg>
                   <span class="control__label">Коста-Рика</span>
                 </label>
               </li>
               <li class="filter__item">
                 <label class="filter__control control">
                   <input class="visually-hidden control__input" type="checkbox" name="Peru" disabled>
-                  <svg class="control__mark control__mark--checked" width="42" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 42 24"><rect width="42" height="24" fill="#7859CF" rx="12"/><circle cx="30" cy="12" r="10" fill="#fff"/></svg>
-                  <svg class="control__mark control__mark--nochecked" width="42" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 42 24"><rect width="42" height="24" fill="#BDBDBD" rx="12"/><circle cx="12" cy="12" r="10" fill="#fff"/></svg>
                   <span class="control__label">Перу</span>
                 </label>
               </li>
             </ul>
           </fieldset>
-          <button class="filter__button button" type="submit">Применить</button>
-          <button class="filter__button button button--reset" type="reset">Сбросить</button>
+          <div class="filter__button-wrapper">
+            <button class="filter__button button" type="submit">Применить</button>
+            <button class="filter__button button button--reset" type="reset">Сбросить</button>
+          </div>
         </form>
       </section>
 
       <section class="catalog">
         <form class="catalog__filter" action="https://echo.htmlacademy.ru/" method="get">
-          <fieldset class="catalog__group">
-            <legend class="catalog__title">Сортировка:</legend>
+            <label class="catalog__title">Сортировка:</label>
             <select class="catalog__select-control" aria-label="Сортировка">
               <option value="default">по умолчанию</option>
               <option value="expensive">сначала дорогие</option>
               <option value="cheap">сначала дешёвые</option>
               <option value="rating">высокий рейтинг</option>
             </select>
-          </fieldset>
         </form>
         <ul class="catalog__list">
           <li class="catalog__item">
             <section class="product-card">
               <a class="product-card__link" href="#">
                 <picture>
-                  <!-- вставить картинки -->
-                  <source>
+                  <source type="image/webp" srcset="./img/catalog/coffee-can-white.webp 1x, ./img/catalog/coffee-can-white@2x.webp 2x">
+                  <img class="product-card__image" src="./img/catalog/coffee-can-white.jpg" width="130" height="188" srcset="./img/catalog/coffee-can-white@2x.jpg 2x" alt="Банка кофе в белой упаковке.">
                 </picture>
               </a>
               <div class="product-card__content">
@@ -244,14 +226,13 @@
                     <h2 class="product-card__title">Декаф Флэт Уайт</h2>
                   </a>
                   <p class="product-card__description">Кофе без кофеина из Эфиопии
-                    с натуральным фермерским молоком</p>
+                    с&nbsp;натуральным фермерским молоком</p>
                 </div>
                 <footer class="product-card__footer">
                   <p class="product-card__price">225₽</p>
-                  <a class="product-card__button" href="#">
-                    <!-- изменить иконку -->
-                    <svg class="product-card__icon" width="21" height="18" viewBox="0 0 21 18"><use href="./img/sprite.svg#basket-icon"></use></svg>
-                    <span class="visually-hidden">В корзину</span>
+                  <a class="product-card__button button" href="#">
+                    <svg class="product-card__icon" width="20" height="16" viewBox="0 0 20 16"><use href="./img/icons/stack.svg#basket+-icon"></use></svg>
+                    В корзину
                   </a>
                 </footer>
               </div>
@@ -261,8 +242,8 @@
             <section class="product-card">
               <a class="product-card__link" href="#">
                 <picture>
-                  <!-- вставить картинки -->
-                  <source>
+                  <source type="image/webp" srcset="./img/catalog/coffee-can-lavander.webp 1x, ./img/catalog/coffee-can-lavander@2x.webp 2x">
+                  <img class="product-card__image" src="./img/catalog/coffee-can-lavander.jpg" width="130" height="188" srcset="./img/catalog/coffee-can-lavander@2x.jpg 2x" alt="Банка кофе в лавандовой упаковке.">
                 </picture>
               </a>
               <div class="product-card__content">
@@ -271,14 +252,13 @@
                     <h2 class="product-card__title">Декаф Флэт Уайт</h2>
                   </a>
                   <p class="product-card__description">Кофе без кофеина из Эфиопии
-                    с натуральным фермерским молоком</p>
+                    с&nbsp;натуральным фермерским молоком</p>
                 </div>
                 <footer class="product-card__footer">
                   <p class="product-card__price">225₽</p>
-                  <a class="product-card__button" href="#">
-                    <!-- изменить иконку -->
-                    <svg class="product-card__icon" width="21" height="18" viewBox="0 0 21 18"><use href="./img/sprite.svg#basket-icon"></use></svg>
-                    <span class="visually-hidden">В корзину</span>
+                  <a class="product-card__button button" href="#">
+                    <svg class="product-card__icon" width="20" height="16" viewBox="0 0 20 16"><use href="./img/icons/stack.svg#basket+-icon"></use></svg>
+                    В корзину
                   </a>
                 </footer>
               </div>
@@ -288,8 +268,8 @@
             <section class="product-card">
               <a class="product-card__link" href="#">
                 <picture>
-                  <!-- вставить картинки -->
-                  <source>
+                  <source type="image/webp" srcset="./img/catalog/coffee-can-black.webp 1x, ./img/catalog/coffee-can-black@2x.webp 2x">
+                  <img class="product-card__image" src="./img/catalog/coffee-can-black.jpg" width="130" height="188" srcset="./img/catalog/coffee-can-black@2x.jpg 2x" alt="Банка кофе в черной упаковке.">
                 </picture>
               </a>
               <div class="product-card__content">
@@ -298,14 +278,13 @@
                     <h2 class="product-card__title">Декаф Флэт Уайт</h2>
                   </a>
                   <p class="product-card__description">Кофе без кофеина из Эфиопии
-                    с натуральным фермерским молоком</p>
+                    с&nbsp;натуральным фермерским молоком</p>
                 </div>
                 <footer class="product-card__footer">
                   <p class="product-card__price">225₽</p>
-                  <a class="product-card__button" href="#">
-                    <!-- изменить иконку -->
-                    <svg class="product-card__icon" width="21" height="18" viewBox="0 0 21 18"><use href="./img/sprite.svg#basket-icon"></use></svg>
-                    <span class="visually-hidden">В корзину</span>
+                  <a class="product-card__button button" href="#">
+                    <svg class="product-card__icon" width="20" height="16" viewBox="0 0 20 16"><use href="./img/icons/stack.svg#basket+-icon"></use></svg>
+                    В корзину
                   </a>
                 </footer>
               </div>
@@ -315,8 +294,8 @@
             <section class="product-card">
               <a class="product-card__link" href="#">
                 <picture>
-                  <!-- вставить картинки -->
-                  <source>
+                  <source type="image/webp" srcset="./img/catalog/coffee-can-pink.webp 1x, ./img/catalog/coffee-can-pink@2x.webp 2x">
+                  <img class="product-card__image" src="./img/catalog/coffee-can-pink.jpg" width="130" height="188" srcset="./img/catalog/coffee-can-pink@2x.jpg 2x" alt="Банка кофе в розовой упаковке.">
                 </picture>
               </a>
               <div class="product-card__content">
@@ -325,14 +304,13 @@
                     <h2 class="product-card__title">Декаф Флэт Уайт</h2>
                   </a>
                   <p class="product-card__description">Кофе без кофеина из Эфиопии
-                    с натуральным фермерским молоком</p>
+                    с&nbsp;натуральным фермерским молоком</p>
                 </div>
                 <footer class="product-card__footer">
                   <p class="product-card__price">225₽</p>
-                  <a class="product-card__button" href="#">
-                    <!-- изменить иконку -->
-                    <svg class="product-card__icon" width="21" height="18" viewBox="0 0 21 18"><use href="./img/sprite.svg#basket-icon"></use></svg>
-                    <span class="visually-hidden">В корзину</span>
+                  <a class="product-card__button button" href="#">
+                    <svg class="product-card__icon" width="20" height="16" viewBox="0 0 20 16"><use href="./img/icons/stack.svg#basket+-icon"></use></svg>
+                    В корзину
                   </a>
                 </footer>
               </div>
@@ -342,8 +320,8 @@
             <section class="product-card">
               <a class="product-card__link" href="#">
                 <picture>
-                  <!-- вставить картинки -->
-                  <source>
+                  <source type="image/webp" srcset="./img/catalog/coffee-can-brown.webp 1x, ./img/catalog/coffee-can-brown@2x.webp 2x">
+                  <img class="product-card__image" src="./img/catalog/coffee-can-brown.jpg" width="130" height="188" srcset="./img/catalog/coffee-can-brown@2x.jpg 2x" alt="Банка кофе в коричневый упаковке.">
                 </picture>
               </a>
               <div class="product-card__content">
@@ -352,14 +330,13 @@
                     <h2 class="product-card__title">Декаф Флэт Уайт</h2>
                   </a>
                   <p class="product-card__description">Кофе без кофеина из Эфиопии
-                    с натуральным фермерским молоком</p>
+                    с&nbsp;натуральным фермерским молоком</p>
                 </div>
                 <footer class="product-card__footer">
                   <p class="product-card__price">225₽</p>
-                  <a class="product-card__button" href="#">
-                    <!-- изменить иконку -->
-                    <svg class="product-card__icon" width="21" height="18" viewBox="0 0 21 18"><use href="./img/sprite.svg#basket-icon"></use></svg>
-                    <span class="visually-hidden">В корзину</span>
+                  <a class="product-card__button button" href="#">
+                    <svg class="product-card__icon" width="20" height="16" viewBox="0 0 20 16"><use href="./img/icons/stack.svg#basket+-icon"></use></svg>
+                    В корзину
                   </a>
                 </footer>
               </div>
@@ -369,8 +346,8 @@
             <section class="product-card">
               <a class="product-card__link" href="#">
                 <picture>
-                  <!-- вставить картинки -->
-                  <source>
+                  <source type="image/webp" srcset="./img/catalog/coffee-can-yellow.webp 1x, ./img/catalog/coffee-can-yellow@2x.webp 2x">
+                  <img class="product-card__image" src="./img/catalog/coffee-can-yellow.jpg" width="130" height="188" srcset="./img/catalog/coffee-can-yellow@2x.jpg 2x" alt="Банка кофе в желтой упаковке.">
                 </picture>
               </a>
               <div class="product-card__content">
@@ -379,14 +356,13 @@
                     <h2 class="product-card__title">Декаф Флэт Уайт</h2>
                   </a>
                   <p class="product-card__description">Кофе без кофеина из Эфиопии
-                    с натуральным фермерским молоком</p>
+                    с&nbsp;натуральным фермерским молоком</p>
                 </div>
                 <footer class="product-card__footer">
                   <p class="product-card__price">225₽</p>
-                  <a class="product-card__button" href="#">
-                    <!-- изменить иконку -->
-                    <svg class="product-card__icon" width="21" height="18" viewBox="0 0 21 18"><use href="./img/sprite.svg#basket-icon"></use></svg>
-                    <span class="visually-hidden">В корзину</span>
+                  <a class="product-card__button button" href="#">
+                    <svg class="product-card__icon" width="20" height="16" viewBox="0 0 20 16"><use href="./img/icons/stack.svg#basket+-icon"></use></svg>
+                    В корзину
                   </a>
                 </footer>
               </div>
@@ -421,7 +397,7 @@
       <section class="map">
         <h2 class="map__title visually-hidden">Карта</h2>
         <!-- add map and img -->
-        <iframe class="contacts__map map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3013235402287!2d30.32210779999999!3d59.93873540000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca18e1d7%3A0xe1b646f62fb95e7a!2sMISHKA!5e0!3m2!1sru!2sru!4v1671524485541!5m2!1sru!2sru" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="map__wrapper"></div>
       </section>
     </main>
     <footer class="main-footer">

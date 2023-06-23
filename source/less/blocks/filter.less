@@ -2,3 +2,71 @@
   display: flex;
   flex-direction: column;
 }
+
+.filter__group {
+  border: none;
+  margin: 0;
+  margin-top: 19px;
+  padding: 0;
+
+  &--country {
+    margin-top: 34px;
+    margin-bottom: 31px;
+  }
+}
+
+.filter__title {
+  .font-style(600, 16px, 24px);
+  margin-bottom: 17px;
+}
+
+.filter__range {
+  margin-bottom: 24px;
+}
+
+.filter__range-wrapper-input {
+  display: flex;
+  gap: 44px;
+  padding: 1px 3px;
+  margin-bottom: 11px;
+}
+
+.filter__label--min-price {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -26px;
+    top: 20px;
+    width: 7px;
+    border: 1px solid #bdbdbd;
+  }
+}
+
+.filter__label--min-price .filter__range-input {
+  color: #bdbdbd;
+}
+
+.filter__range-input {
+  .font-style(500, 16px, 24px);
+  text-align: center;
+  box-sizing: border-box;
+  border: 2px solid @form-color;
+  border-radius: 4px;
+  width: 118px;
+  height: 40px;
+}
+
+.filter__list {
+  .nav-list;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.filter__button-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
