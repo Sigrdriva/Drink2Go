@@ -70,3 +70,46 @@
   flex-direction: column;
   gap: 20px;
 }
+
+@media (max-width: @mobile-width-only) {
+  .filter {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  .filter {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px 30px;
+  }
+
+  .filter__group--country {
+    margin-top: 19px;
+    margin-bottom: 0;
+  }
+
+  .filter__button-wrapper {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .filter__title {
+    padding: 0;
+  }
+
+  .filter__range {
+    margin-bottom: 20px;
+  }
+
+  .filter__range-wrapper-input {
+    gap: 47px;
+    padding: 1px 0;
+  }
+
+  .filter__range-input {
+    width: 88px;
+  }
+}

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Drink2Go</title>
     <link rel="preload" href="fonts/montserratregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserratmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/montserratbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.css">
@@ -27,7 +28,7 @@
         <button class="main-nav__toggle main-nav__toggle--closed main-nav__toggle--nojs" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-nav__list site-list site-list--closed site-list--nojs">
           <li class="site-list__item">
-            <a class="site-list__link" href="#">Главная</a>
+            <a class="site-list__link site-list__link--current" href="#">Главная</a>
           </li>
           <li class="site-list__item">
             <a class="site-list__link" href="#">Каталог</a>
@@ -62,23 +63,29 @@
       <section class="slider swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide slider__item slider__item--flat-white">
-            <picture>
-              <!-- добавитть для планшета и ПК -->
+            <picture class="slider__image-wrapper">
+              <source type="image/webp" media="(min-width: 1440px)" srcset="./img/hero-flat-white-desktop.webp 1x, ./img/hero-flat-white-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/hero-flat-white-tablet.webp 1x, ./img/hero-flat-white-tablet@2x.webp 2x">
               <source type="image/webp" srcset="./img/hero-flat-white-mobile.webp 1x, ./img/hero-flat-white-mobile@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="./img/hero-flat-white-desktop.jpg 1x, ./img/hero-flat-white-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="./img/hero-flat-white-tablet.jpg 1x, ./img/hero-flat-white-tablet@2x.jpg 2x">
               <img class="slider__image" src="./img/hero-flat-white-mobile.png" width="280" height="280" srcset="./img/hero-flat-white-mobile@2x.png 2x" alt="Банка кофе 'Флэт Уайт'.">
             </picture>
             <p class="slider__feature">Новинка!</p>
             <h2 class="slider__title">Декаф Флэт Уайт</h2>
-            <p class="slider__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+            <p class="slider__description">Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком — то, что нужно для&nbsp;расслабления после тяжёлого рабочего дня</p>
             <div class="slider__item-wrapper">
               <p class="slider__price"><span class="slider__price--old">295₽</span>225₽</p>
               <a class="slider__order button" href="#">Заказать</a>
             </div>
           </div>
           <div class="swiper-slide slider__item slider__item--lavander">
-            <picture>
-              <!-- добавитть для планшета и ПК -->
+            <picture class="slider__image-wrapper">
+              <source type="image/webp" media="(min-width: 1440px)" srcset="./img/hero-lavander-desktop.webp 1x, ./img/hero-lavander-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/hero-lavander-tablet.webp 1x, ./img/hero-lavander-tablet@2x.webp 2x">
               <source type="image/webp" srcset="./img/hero-lavander-mobile.webp 1x, ./img/hero-lavander-mobile@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="./img/hero-lavander-desktop.jpg 1x, ./img/hero-lavander-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="./img/hero-lavander-tablet.jpg 1x, ./img/hero-lavander-tablet@2x.jpg 2x">
               <img class="slider__image" src="./img/hero-lavander-mobile.png" width="280" height="280" srcset="./img/hero-lavander-mobile@2x.png 2x" alt="Банка кофе 'Лавандовый Латте'.">
             </picture>
             <p class="slider__feature">Новинка!</p>
@@ -90,9 +97,12 @@
             </div>
           </div>
           <div class="swiper-slide slider__item slider__item--espresso">
-            <picture>
-              <!-- добавитть для планшета и ПК -->
+            <picture class="slider__image-wrapper">
+              <source type="image/webp" media="(min-width: 1440px)" srcset="./img/hero-espresso-desktop.webp 1x, ./img/hero-espresso-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/hero-espresso-tablet.webp 1x, ./img/hero-espresso-tablet@2x.webp 2x">
               <source type="image/webp" srcset="./img/hero-espresso-mobile.webp 1x, ./img/hero-espresso-mobile@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="./img/hero-espresso-desktop.jpg 1x, ./img/hero-espresso-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="./img/hero-espresso-tablet.jpg 1x, ./img/hero-espresso-tablet@2x.jpg 2x">
               <img class="slider__image" src="./img/hero-espresso-mobile.png" width="280" height="280" srcset="./img/hero-espresso-mobile@2x.png 2x" alt="Банка кофе 'Тройной Эспрессо'.">
             </picture>
             <p class="slider__feature">Новинка!</p>
@@ -151,7 +161,7 @@
             <div class="filter__range range">
               <div class="range__wrapper">
                 <div class="range__scale">
-                  <div class="range__bar" style="left: 3px; width: 241px">
+                  <div class="range__bar" style="left: 3px; min-width: 192px">
                     <button class="range__toggle range__toggle--min" type="button">
                       <span class="visually-hidden">Изменить минимальную цену.</span>
                     </button>
@@ -257,7 +267,7 @@
         <ul class="catalog__list">
           <li class="catalog__item">
             <section class="product-card">
-              <a class="product-card__link" href="#">
+              <a class="product-card__link-image" href="#">
                 <picture>
                   <source type="image/webp" srcset="./img/catalog/coffee-can-white.webp 1x, ./img/catalog/coffee-can-white@2x.webp 2x">
                   <img class="product-card__image" src="./img/catalog/coffee-can-white.jpg" width="130" height="188" srcset="./img/catalog/coffee-can-white@2x.jpg 2x" alt="Банка кофе в белой упаковке.">
@@ -283,7 +293,7 @@
           </li>
           <li class="catalog__item">
             <section class="product-card">
-              <a class="product-card__link" href="#">
+              <a class="product-card__link-image" href="#">
                 <picture>
                   <source type="image/webp" srcset="./img/catalog/coffee-can-lavander.webp 1x, ./img/catalog/coffee-can-lavander@2x.webp 2x">
                   <img class="product-card__image" src="./img/catalog/coffee-can-lavander.jpg" width="130" height="188" srcset="./img/catalog/coffee-can-lavander@2x.jpg 2x" alt="Банка кофе в лавандовой упаковке.">
@@ -309,7 +319,7 @@
           </li>
           <li class="catalog__item">
             <section class="product-card">
-              <a class="product-card__link" href="#">
+              <a class="product-card__link-image" href="#">
                 <picture>
                   <source type="image/webp" srcset="./img/catalog/coffee-can-black.webp 1x, ./img/catalog/coffee-can-black@2x.webp 2x">
                   <img class="product-card__image" src="./img/catalog/coffee-can-black.jpg" width="130" height="188" srcset="./img/catalog/coffee-can-black@2x.jpg 2x" alt="Банка кофе в черной упаковке.">
@@ -335,7 +345,7 @@
           </li>
           <li class="catalog__item">
             <section class="product-card">
-              <a class="product-card__link" href="#">
+              <a class="product-card__link-image" href="#">
                 <picture>
                   <source type="image/webp" srcset="./img/catalog/coffee-can-pink.webp 1x, ./img/catalog/coffee-can-pink@2x.webp 2x">
                   <img class="product-card__image" src="./img/catalog/coffee-can-pink.jpg" width="130" height="188" srcset="./img/catalog/coffee-can-pink@2x.jpg 2x" alt="Банка кофе в розовой упаковке.">
@@ -361,7 +371,7 @@
           </li>
           <li class="catalog__item">
             <section class="product-card">
-              <a class="product-card__link" href="#">
+              <a class="product-card__link-image" href="#">
                 <picture>
                   <source type="image/webp" srcset="./img/catalog/coffee-can-brown.webp 1x, ./img/catalog/coffee-can-brown@2x.webp 2x">
                   <img class="product-card__image" src="./img/catalog/coffee-can-brown.jpg" width="130" height="188" srcset="./img/catalog/coffee-can-brown@2x.jpg 2x" alt="Банка кофе в коричневый упаковке.">
@@ -387,7 +397,7 @@
           </li>
           <li class="catalog__item">
             <section class="product-card">
-              <a class="product-card__link" href="#">
+              <a class="product-card__link-image" href="#">
                 <picture>
                   <source type="image/webp" srcset="./img/catalog/coffee-can-yellow.webp 1x, ./img/catalog/coffee-can-yellow@2x.webp 2x">
                   <img class="product-card__image" src="./img/catalog/coffee-can-yellow.jpg" width="130" height="188" srcset="./img/catalog/coffee-can-yellow@2x.jpg 2x" alt="Банка кофе в желтой упаковке.">
@@ -416,7 +426,7 @@
           <ul class="catalog__pagination-list pagination">
             <li class="pagination__item">
               <a class="pagination__link pagination__link--prev" href="#">
-                <span class="visually-hidden">Предыдущая страница.</span>
+                <span class="pagination__link-text">Назад</span>
               </a>
             </li>
             <li class="pagination__item">
@@ -430,7 +440,7 @@
             </li>
             <li class="pagination__item">
               <a class="pagination__link pagination__link--next" href="#">
-                <span class="visually-hidden">Следующая страница.</span>
+                <span class="pagination__link-text">Вперёд</span>
               </a>
             </li>
           </ul>
@@ -472,7 +482,7 @@
         </ul>
       </div>
 
-      <section class="navigation">
+      <section class="main-footer__menu navigation">
         <h2 class="navigation__title">Интернет-магазин</h2>
         <ul class="navigation__list">
           <li class="navigation__item">
@@ -490,7 +500,7 @@
         </ul>
       </section>
 
-      <section class="media">
+      <section class="main-footer__menu media">
         <h2 class="media__title">Медиа</h2>
         <ul class="media__list">
           <li class="media__item">
@@ -505,7 +515,7 @@
         </ul>
       </section>
 
-      <section class="contacts">
+      <section class="main-footer__menu contacts">
         <h2 class="contacts__title">Контакты</h2>
         <address class="contacts__address">
           Санкт-Петербург, набережная реки Карповки, дом 5

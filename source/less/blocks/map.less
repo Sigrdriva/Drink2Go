@@ -1,7 +1,20 @@
 .map__wrapper {
   min-width: 320px;
   min-height: 420px;
-  background-image: url("../../img/map.jpg");
+  background-image: url("../../img/map-phone.jpg");
   background-position: center;
   background-repeat: no-repeat;
+}
+
+@media (min-width: @tablet-width) {
+  .map__wrapper {
+    background-image: url("../../img/map-tablet.jpg");
+    min-height: 480px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .map__wrapper {
+    background-image: url("../../img/map-desktop.jpg");
+  }
 }

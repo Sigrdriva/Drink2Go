@@ -65,3 +65,21 @@
     background-color: #f8f8f8;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .control__label {
+    padding-left: 51px;
+
+    &::before {
+      left: -1px;
+    }
+
+    &::after {
+      left: 1px;
+    }
+  }
+
+  .control__input:checked ~ .control__label::after {
+    left: 19px;
+  }
+}

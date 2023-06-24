@@ -2,8 +2,6 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 20px;
-  border-bottom: 1px solid #f0ebff;
 }
 
 .contacts__title {
@@ -35,4 +33,10 @@
   position: absolute;
   top: 2px;
   left: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts {
+    padding-left: 6px;
+  }
 }

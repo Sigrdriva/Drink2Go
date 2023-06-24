@@ -66,3 +66,50 @@
   .font-style;
   margin: 0;
 }
+
+@media (min-width: @tablet-width) {
+  .advantages {
+    padding: 60px 30px 100px;
+  }
+
+  .advantages__title {
+    .font-style-title(700; 42px; 64px);
+    margin-bottom: 60px;
+  }
+
+  .advantages__list {
+    display: grid;
+    grid-template-columns: 339px 339px;
+    column-gap: 30px;
+    row-gap: 50px;
+    justify-content: center;
+  }
+
+  .advantages__item {
+    padding-top: 0;
+    padding-left: 72px;
+    text-align: left;
+
+    &::before {
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+
+    &--speed,
+    &--ecology {
+      &::before {
+        top: 4px;
+      }
+    }
+  }
+
+  .advantages__subtitle {
+    .font-style-title(700; 24px; 36px);
+    margin-bottom: 10px;
+  }
+
+  .advantages__description {
+    .font-style(400; 16px; 24px);
+  }
+}

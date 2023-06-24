@@ -23,3 +23,14 @@ navToggle.addEventListener('click', function () {
     navToggle.classList.remove('main-nav__toggle--opened');
   }
 });
+
+
+let priceInput = document.querySelectorAll('.filter__range-input');
+
+window.addEventListener("resize", function() {
+  if(window.innerWidth >= 768) {
+    priceInput[1].value = 900;
+  } else {
+    priceInput[1].value = 123;
+  }
+});

@@ -20,6 +20,7 @@
   top: -1px;
   height: 4px;
   background-color: @form-color;
+  width: 241px;
 }
 
 .range__toggle {
@@ -39,5 +40,29 @@
 
   &--max {
     left: 234px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .range__wrapper {
+    width: 223px;
+  }
+
+  .range__scale {
+    width: 223px;
+  }
+
+  .range__bar {
+    width: 192px;
+  }
+
+  .range__toggle {
+    &--min {
+      left: -5px;
+    }
+
+    &--max {
+      left: 174px;
+    }
   }
 }
