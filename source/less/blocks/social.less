@@ -9,3 +9,24 @@
   padding: 10px;
   display: block;
 }
+
+.social__icon {
+  fill: #bdbdbd;
+}
+
+.social__link:hover,
+.social__link:focus {
+  background-color: #f0ebff;
+  border-radius: 4px;
+}
+
+.social__link:active {
+  background-color: rgba(120, 89, 207, 0.25);
+  border-radius: 4px;
+}
+
+.social__link:hover .social__icon,
+.social__link:focus .social__icon,
+.social__link:active .social__icon {
+  fill: @base-color;
+}

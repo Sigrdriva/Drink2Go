@@ -41,6 +41,17 @@
   &--max {
     left: 234px;
   }
+
+  &:hover,
+  &:focus {
+    outline: 8px solid rgba(120, 89, 207, 0.25);
+    outline-offset: -19px;
+  }
+
+  &:active {
+    outline: 8px solid @base-color;
+    outline-offset: -19px;
+  }
 }
 
 @media (min-width: @tablet-width) {

@@ -7,8 +7,32 @@
   border: none;
   max-width: 280px;
 
+  &:hover,
+  &:focus {
+    background-color: @form-color;
+  }
+
+  &:active {
+    background-color: @base-dark-color;
+  }
+
+  &:disabled {
+    background-color: #bdbdbd;
+  }
+
   &--reset {
     color: @base-color;
     background-color: #ffffff;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:disabled {
+      color: #ffffff;
+    }
+
+    &:disabled {
+      background-color: #e2e2e2;
+    }
   }
 }

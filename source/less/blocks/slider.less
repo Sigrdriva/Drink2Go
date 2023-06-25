@@ -32,7 +32,7 @@
 .slider__title {
   .font-style-title(700, 36px, 48px);
   text-align: center;
-  margin: 0px;
+  margin: 0;
   margin-bottom: 10px;
   letter-spacing: 0.72px;
   padding: 0 20px;
@@ -58,7 +58,7 @@
   margin: 0;
 }
 
-.slider__price--old {
+.slider__price-old {
   .font-style(400, 16px, 32px, @base-color);
   margin-right: 6px;
   text-decoration: line-through;
@@ -77,11 +77,11 @@
 
     &:hover,
     &:focus {
-      background: linear-gradient(90deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+      background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
     }
 
     &:active {
-      background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0.00) 100%);
+      background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
     }
   }
 
@@ -90,19 +90,24 @@
 
     &:hover,
     &:focus {
-      background: linear-gradient(-90deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+      background: linear-gradient(-90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
     }
 
     &:active {
-      background: linear-gradient(-90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0.00) 100%);
+      background: linear-gradient(-90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
     }
   }
+}
+
+.slider__button:disabled .slider__button-icon {
+  fill: #bdbdbd;
 }
 
 .slider__button-icon {
   position: absolute;
   top: 318px;
   left: 5px;
+  fill: #7859cf;
 }
 
 @media (max-width: @mobile-width-only) {
@@ -151,17 +156,16 @@
 
 @media (min-width: @tablet-width) and (max-width: @desktop-width-but) {
   .slider__item {
-
     &--flat-white {
-      background: linear-gradient(to top,#ffffff 188px, #f3ebe1 188px);
+      background: linear-gradient(to top, #ffffff 188px, #f3ebe1 188px);
     }
 
     &--lavander {
-      background: linear-gradient(to top,#ffffff 188px, #eae6fc 188px);
+      background: linear-gradient(to top, #ffffff 188px, #eae6fc 188px);
     }
 
     &--espresso {
-      background: linear-gradient(to top,#ffffff 188px, #e5e6e8 188px);
+      background: linear-gradient(to top, #ffffff 188px, #e5e6e8 188px);
     }
   }
 }
@@ -213,31 +217,3 @@
   }
 }
 
-@media (max-width: @desktop-width-but) {
-  .swiper-pagination {
-    display: none;
-  }
-}
-
-//Стилизация библиотеки слайдера
-.swiper-pagination {
-  bottom: 65px;
-  left: 4px;
-}
-
-// Стилизация полосок
-.progress-bar {
-  width: 62px;
-  height: 4px;
-  margin-right: 8px;
- // transform: rotate(90deg);
-  display: inline-block;
-}
-
-.progress-bar-active {
-  background-color: @base-color;
-}
-
-.progress-bar-inactive {
-  background-color: #ffffff;
-}

@@ -1,0 +1,30 @@
+@media (max-width: @desktop-width-but) {
+  .swiper-pagination {
+    display: none;
+  }
+}
+
+.swiper-pagination {
+  bottom: 65px;
+  left: 4px;
+}
+
+// Стилизация полосок
+.swiper-pagination__progress-bar {
+  width: 62px;
+  height: 4px;
+  margin-right: 8px;
+  display: inline-block;
+
+  &:hover {
+    background-color: rgba(120, 89, 207, 0.25);
+  }
+}
+
+.swiper-pagination__progress-bar-active {
+  background-color: @base-color;
+}
+
+.swiper-pagination__progress-bar-inactive {
+  background-color: #ffffff;
+}

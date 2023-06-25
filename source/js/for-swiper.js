@@ -15,8 +15,8 @@ const swiper = new Swiper('.swiper', {
       var progressBarHTML = '';
 
       for (var i = 1; i <= total; i++) {
-        var colorClass = (i == current) ? 'progress-bar-active' : 'progress-bar-inactive';
-        progressBarHTML += '<div class="progress-bar ' + colorClass + '"></div>';
+        var colorClass = (i == current) ? 'swiper-pagination__progress-bar-active' : 'swiper-pagination__progress-bar-inactive';
+        progressBarHTML += '<div class="swiper-pagination__progress-bar ' + colorClass + '"></div>';
       }
 
       return progressBarHTML;

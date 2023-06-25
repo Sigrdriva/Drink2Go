@@ -7,7 +7,7 @@
     <link rel="preload" href="fonts/montserratregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/montserratmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/montserratbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
@@ -76,7 +76,7 @@
             <h2 class="slider__title">Декаф Флэт Уайт</h2>
             <p class="slider__description">Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком — то, что нужно для&nbsp;расслабления после тяжёлого рабочего дня</p>
             <div class="slider__item-wrapper">
-              <p class="slider__price"><span class="slider__price--old">295₽</span>225₽</p>
+              <p class="slider__price"><span class="slider__price-old">295₽</span>225₽</p>
               <a class="slider__order button" href="#">Заказать</a>
             </div>
           </div>
@@ -93,7 +93,7 @@
             <h2 class="slider__title">Лавандовый Латте</h2>
             <p class="slider__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
             <div class="slider__item-wrapper">
-              <p class="slider__price"><span class="slider__price--old">285₽</span>265₽</p>
+              <p class="slider__price"><span class="slider__price-old">285₽</span>265₽</p>
               <a class="slider__order button" href="#">Заказать</a>
             </div>
           </div>
@@ -110,7 +110,7 @@
             <h2 class="slider__title">Тройной Эспрессо</h2>
             <p class="slider__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
             <div class="slider__item-wrapper">
-              <p class="slider__price"><span class="slider__price--old">395₽</span>375₽</p>
+              <p class="slider__price"><span class="slider__price-old">395₽</span>375₽</p>
               <a class="slider__order button" href="#">Заказать</a>
             </div>
           </div>
@@ -174,7 +174,7 @@
               </div>
               <div class="filter__range-wrapper-input">
                 <label class="filter__label filter__label--min-price">
-                  <input class="filter__range-input" type="number" value="0" name="min-price">
+                  <input class="filter__range-input" type="number" value="" name="min-price" placeholder="0">
                 </label>
                 <label class="filter__label">
                   <input class="filter__range-input" type="number" value="123" name="max-price">
@@ -426,6 +426,7 @@
               <li class="pagination__item">
                 <a class="pagination__link pagination__link--prev" href="#">
                   <span class="pagination__link-text">Назад</span>
+                  <svg class="pagination__icon" width="6" height="10" viewBox="0 0 6 10"><use href="./img/icons/stack.svg#arrow-left" /></svg>
                 </a>
               </li>
               <li class="pagination__item">
@@ -440,6 +441,7 @@
               <li class="pagination__item">
                 <a class="pagination__link pagination__link--next" href="#">
                   <span class="pagination__link-text">Вперёд</span>
+                  <svg class="pagination__icon" width="6" height="10" viewBox="0 0 6 10"><use href="./img/icons/stack.svg#arrow-right" /></svg>
                 </a>
               </li>
             </ul>
@@ -470,7 +472,7 @@
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--pinterest" href="№">
+            <a class="social__link social__link--pinterest" href="#">
               <span class="visually-hidden">Мы в Пинтересте</span>
               <svg class="social__icon" width="20" height="20" viewBox="0 0 20 20"><use href="./img/icons/stack.svg#pinterest-icon" /></svg>
             </a>

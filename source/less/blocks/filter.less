@@ -46,10 +46,6 @@
   }
 }
 
-.filter__label--min-price .filter__range-input {
-  color: #bdbdbd;
-}
-
 .filter__range-input {
   .font-style(500, 16px, 24px);
   text-align: center;
@@ -58,6 +54,16 @@
   border-radius: 4px;
   width: 118px;
   height: 40px;
+
+  &::placeholder {
+    color: #bdbdbd;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: @base-dark-color;
+  }
 }
 
 .filter__list {

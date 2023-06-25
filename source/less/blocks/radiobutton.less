@@ -27,19 +27,26 @@
     display: none;
     width: 16px;
     height: 16px;
-    background-color: @base-color;
     left: 7px;
     top: 5px;
+    background-color: #ffffff;
   }
+}
 
-  &:hover::after,
-  &:active::after {
-    border-color: rgba(120, 89, 207, 0.25);
-  }
+.radiobutton__input:hover + .radiobutton__label::after,
+.radiobutton__input:focus + .radiobutton__label::after {
+  display: block;
+  background-color: rgba(120, 89, 207, 0.25);
+}
+
+.radiobutton__input:hover + .radiobutton__label::before,
+.radiobutton__input:focus + .radiobutton__label::before {
+  border-color: @base-color;
 }
 
 .radiobutton__input:checked + .radiobutton__label::after {
   display: block;
+  background-color: @base-color;
 }
 
 .radiobutton__input:checked + .radiobutton__label::before {
@@ -54,6 +61,10 @@
   }
 }
 
+.radiobutton__input:disabled:checked + .radiobutton__label::after {
+  background-color: #e2e2e2;
+}
+
 .radiobutton__input:focus-visible ~ .radiobutton__label {
   outline: #000000 auto 2px;
 }
@@ -61,10 +72,10 @@
 @media (min-width: @tablet-width) {
   .radiobutton__label {
     padding-left: 34px;
-    padding-top: 0px;
+    padding-top: 0;
 
     &::before {
-      left: 0px;
+      left: 0;
       top: 1px;
     }
 
@@ -74,6 +85,3 @@
     }
   }
 }
-
-
-
