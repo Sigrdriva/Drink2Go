@@ -11,8 +11,25 @@
   padding:  12px 20px;
 }
 
+.main-header__logo-text {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .main-header__wrapper {
     padding:  22px 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-header__logo-text {
+    display: block;
+    .font-style(400; 12px; 16px);
+    padding-top: 2px;
+  }
+  .main-header__wrapper {
+    display: flex;
+    gap: 20px;
+    padding:  22px 40px;
   }
 }

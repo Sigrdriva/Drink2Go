@@ -139,6 +139,17 @@
     padding: 0 80px;
   }
 
+  .slider__button {
+    height: 640px;
+  }
+
+  .slider__button-icon {
+    top: 310px;
+    left: 35px;
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width-but) {
   .slider__item {
 
     &--flat-white {
@@ -153,20 +164,80 @@
       background: linear-gradient(to top,#ffffff 188px, #e5e6e8 188px);
     }
   }
-
-  .slider__button {
-    height: 640px;
-  }
-
-  .slider__button-icon {
-    top: 310px;
-    left: 35px;
-  }
 }
 
 @media (min-width: @desktop-width) {
   .slider__image {
     width: 600px;
     height: 600px;
+    margin: 0;
+    padding-left: 25px;
   }
+
+  .slider__item {
+    grid-template-columns: 625px auto;
+    grid-template-rows: repeat(6, auto);
+    padding: 30px 80px 84px;
+    column-gap: 30px;
+    box-sizing: border-box;
+  }
+
+  .slider__image-wrapper {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+  }
+
+  .slider__feature {
+    margin-top: 150px;
+    text-align: left;
+  }
+
+  .slider__title {
+    padding: 0;
+    text-align: left;
+    margin-bottom: 16px;
+  }
+
+  .slider__description {
+    text-align: left;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+
+  .slider__item-wrapper {
+    justify-content: start;
+  }
+
+  .slider__button {
+    top: 37px;
+  }
+}
+
+@media (max-width: @desktop-width-but) {
+  .swiper-pagination {
+    display: none;
+  }
+}
+
+//Стилизация библиотеки слайдера
+.swiper-pagination {
+  bottom: 65px;
+  left: 4px;
+}
+
+// Стилизация полосок
+.progress-bar {
+  width: 62px;
+  height: 4px;
+  margin-right: 8px;
+ // transform: rotate(90deg);
+  display: inline-block;
+}
+
+.progress-bar-active {
+  background-color: @base-color;
+}
+
+.progress-bar-inactive {
+  background-color: #ffffff;
 }

@@ -1,6 +1,8 @@
 .filter {
   display: flex;
   flex-direction: column;
+  padding: 50px 20px 16px;
+  background-color: #f8f8f8;
 }
 
 .filter__group {
@@ -83,6 +85,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 40px 30px;
+    padding: 80px 20px 24px;
   }
 
   .filter__group--country {
@@ -111,5 +114,53 @@
 
   .filter__range-input {
     width: 88px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .filter {
+    padding: 38px 0 0;
+    grid-template-columns: 318px;
+    grid-row: 3 / 4;
+    gap: 19px;
+  }
+
+  .filter__group {
+    margin-top: 0;
+
+    &--country {
+      margin-top: 13px;
+    }
+  }
+
+  .filter__title {
+    margin-bottom: 18px;
+    letter-spacing: -0.15px;
+  }
+
+  .filter__range {
+    margin-bottom: 22px;
+  }
+
+  .filter__range-input {
+    width: 134px;
+  }
+
+  .filter__range-wrapper-input {
+    gap: 50px;
+  }
+
+  .filter__label--min-price::after {
+    right: -29px;
+    top: 19px;
+  }
+
+  .filter__button-wrapper {
+    margin-top: 22px;
+    justify-content: left;
+  }
+
+  .filter__button {
+    min-width: 149px;
   }
 }

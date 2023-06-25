@@ -33,6 +33,27 @@
 
   .user-list__login,
   .user-list__basket {
-    padding: 32px 22px;
+    padding: 29px 22px;
   }
+}
+
+@media (min-width: @desktop-width) {
+  .user-list {
+    margin-right: 40px;
+    gap: 17px;
+  }
+
+  .user-list__link {
+    .menu-link;
+    position: relative;
+    padding-left: 24px;
+  }
+
+  .user-list__login-icon,
+  .user-list__basket-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
 }

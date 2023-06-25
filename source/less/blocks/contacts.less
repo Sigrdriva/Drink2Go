@@ -35,8 +35,14 @@
   left: 0;
 }
 
-@media (min-width: @tablet-width) {
+@media (min-width: @tablet-width) and (max-width: @desktop-width-but) {
   .contacts {
     padding-left: 6px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    padding-top: 10px;
   }
 }
