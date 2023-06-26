@@ -1,6 +1,5 @@
 .main-header {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   color: @text-color;
   background-color: @bg-color;
@@ -22,6 +21,11 @@
 }
 
 @media (min-width: @desktop-width) {
+  .main-header {
+    justify-content: center;
+    gap: 123px;
+  }
+
   .main-header__logo-text {
     display: block;
     .font-style(400; 12px; 16px);

@@ -1,15 +1,33 @@
+.map {
+  background-color: #f8f8f8;
+}
+
 .map__wrapper {
-  min-width: 320px;
+  width: 320px;
   min-height: 420px;
   background-image: url("../../img/map-phone.jpg");
   background-position: center;
   background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+@media (min-resolution: 2dppx) {
+  .map__wrapper {
+    background-image: url("../../img/map-phone@2x.jpg");
+    background-size: 320px auto;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .map__wrapper {
     background-image: url("../../img/map-tablet.jpg");
     min-height: 480px;
+    width: 768px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/map-tablet@2x.jpg");
+      background-size: 768px auto;
+    }
   }
 }
 
@@ -17,5 +35,11 @@
   .map__wrapper {
     background-image: url("../../img/map-desktop.jpg");
     min-height: 540px;
+    width: 1440px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/map-desktop@2x.jpg");
+      background-size: 1440px auto;
+    }
   }
 }

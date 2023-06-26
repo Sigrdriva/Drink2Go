@@ -1,15 +1,22 @@
 .catalog-wrapper__subtitle {
   .font-style-subtitle;
+  margin-top: 51px;
+  padding: 0 17px;
 }
 
 .catalog-wrapper__title {
   .font-style-title;
   text-align: center;
   margin: 0;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
+  padding: 0 17px;
 }
 
 @media (min-width: @tablet-width) {
+  .catalog-wrapper__subtitle {
+    margin-top: 80px;
+  }
+
   .catalog-wrapper__title {
     .font-style-title(700; 42px; 64px);
   }
@@ -21,6 +28,7 @@
     grid-template-columns: 318px 1011px;
     gap: 0 30px;
     padding: 100px 40px;
+    justify-content: center;
   }
 
   .catalog-wrapper__subtitle,
@@ -29,6 +37,7 @@
   }
 
   .catalog-wrapper__subtitle {
+    margin-top: 0;
     margin-bottom: 3px;
   }
 }

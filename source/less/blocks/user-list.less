@@ -1,11 +1,31 @@
 .user-list {
   .nav-list;
   display: flex;
+  flex-wrap: wrap;
 }
 
-.user-list__login,
-.user-list__basket {
+.user-list__link {
   padding: 22px;
+  display: block;
+
+  &:hover,
+  &:focus {
+    color: @base-color;
+  }
+
+  &:active {
+    background-color: #f0ebff;
+    color: @base-color;
+  }
+}
+
+.user-list__link:hover .user-list__icon,
+.user-list__link:focus .user-list__icon {
+  fill: @base-color;
+}
+
+.user-list__link:active .user-list__icon {
+  fill: @base-color;
 }
 
 @media (max-width: @desktop-width-but) {
@@ -18,11 +38,11 @@
     display: block;
   }
 
-  .user-list__login-legend {
-    .visually-hidden;
+  .user-list__link:active .user-list__icon {
+    fill: #333333;
   }
 
-  .user-list__basket-legend {
+  .user-list__legend {
     .visually-hidden;
   }
 }
@@ -32,9 +52,8 @@
     margin-right: 20px;
   }
 
-  .user-list__login,
-  .user-list__basket {
-    padding: 29px 22px;
+  .user-list__link {
+    padding: 32px 22px;
   }
 }
 
@@ -42,18 +61,18 @@
   .user-list {
     margin-right: 40px;
     gap: 17px;
+    max-width: 263px;
   }
 
   .user-list__link {
     .menu-link;
     position: relative;
-    padding-left: 24px;
+    padding: 32px 22px 32px 46px;
   }
 
-  .user-list__login-icon,
-  .user-list__basket-icon {
+  .user-list__icon {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 32px;
+    left: 23px;
   }
 }

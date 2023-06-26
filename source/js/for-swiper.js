@@ -8,10 +8,7 @@ const swiper = new Swiper('.swiper', {
     el: '.swiper-pagination',
     type: 'custom',
     renderCustom: function(swiper, current, total) {
-      console.log (current);
-      console.log (total);
       var progress = current / (total - 1) * 100;
-      console.log (progress);
       var progressBarHTML = '';
 
       for (var i = 1; i <= total; i++) {

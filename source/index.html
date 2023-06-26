@@ -6,6 +6,7 @@
     <title>Drink2Go</title>
     <link rel="preload" href="fonts/montserratregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/montserratmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserratsemibold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/montserratbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -42,16 +43,16 @@
           </li>
         </ul>
         <ul class="main-nav__list user-list">
-          <li class="user-list__login">
+          <li class="user-list__item">
             <a class="user-list__link" href="#">
-              <svg class="user-list__login-icon" width="16" height="16" viewBox="0 0 16 16"><use href="./img/icons/stack.svg#login-icon"></use></svg>
-              <span class="user-list__login-legend">Войти</span>
+              <svg class="user-list__icon" width="16" height="16" viewBox="0 0 16 16"><use href="./img/icons/stack.svg#login-icon"></use></svg>
+              <span class="user-list__legend">Войти</span>
             </a>
           </li>
-          <li class="user-list__basket">
+          <li class="user-list__item">
             <a class="user-list__link" href="#">
-              <svg class="user-list__basket-icon" width="16" height="16" viewBox="0 0 16 16"><use href="./img/icons/stack.svg#basket-icon"></use></svg>
-              <span class="user-list__basket-legend">Корзина</span>
+              <svg class="user-list__icon" width="16" height="16" viewBox="0 0 16 16"><use href="./img/icons/stack.svg#basket-icon"></use></svg>
+              <span class="user-list__legend">Корзина</span>
             </a>
           </li>
         </ul>
@@ -117,12 +118,12 @@
         </div>
         <div class="swiper-pagination">
         </div>
-        <div class="swiper-button-left slider__button slider__button--left">
+        <a class="swiper-button-left slider__button slider__button--left" href="#">
           <svg class="slider__button-icon" width="11" height="20" viewBox="0 0 11 20"><use href="./img/icons/stack.svg#slider-arrow-left"></use></svg>
-        </div>
-        <div class="swiper-button-right slider__button slider__button--right">
+        </a>
+        <a class="swiper-button-right slider__button slider__button--right" href="#">
           <svg class="slider__button-icon" width="11" height="20" viewBox="0 0 11 20"><use href="./img/icons/stack.svg#slider-arrow-right"></use></svg>
-        </div>
+        </a>
       </section>
 
       <section class="advantages">
@@ -430,13 +431,13 @@
                 </a>
               </li>
               <li class="pagination__item">
-                <a class="pagination__link">1</a>
+                <a class="pagination__link pagination__link--first" href="#">1</a>
               </li>
               <li class="pagination__item">
                 <a class="pagination__link pagination__link--current" href="#">2</a>
               </li>
               <li class="pagination__item">
-                <a class="pagination__link" href="#">3</a>
+                <a class="pagination__link pagination__link--last" href="#">3</a>
               </li>
               <li class="pagination__item">
                 <a class="pagination__link pagination__link--next" href="#">
@@ -525,10 +526,10 @@
           Санкт-Петербург, набережная реки Карповки, дом 5
           <svg class="contacts__icon" width="13" height="16" viewBox="0 0 13 16"><use href="./img/icons/stack.svg#address-icon" /></svg>
         </address>
-        <address class="contacts__phone">
+        <div class="contacts__phone">
           <a class="contacts__phone-link" href="tel:+79999999999">+7 (999) 999-99-99</a>
           <svg class="contacts__icon" width="13" height="16" viewBox="0 0 13 16"><use href="./img/icons/stack.svg#phone-icon" /></svg>
-        </address>
+        </div>
       </section>
 
       <div class="main-footer__copyright copyright">

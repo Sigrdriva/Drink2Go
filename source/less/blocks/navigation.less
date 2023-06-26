@@ -2,21 +2,31 @@
   .font-style-title(700, 14px, 20px, @base-color);
   letter-spacing: 0.28px;
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .navigation__list {
   display: flex;
   flex-direction: column;
   .nav-list;
-  gap: 4px;
+  gap: 8px;
 }
 
 .navigation__item {
   padding: 6px 0;
 }
 
+.navigation__item:hover .navigation__link,
+.navigation__item:focus .navigation__link {
+  color: @form-color;
+}
+
+.navigation__item:active .navigation__link {
+  color: @base-dark-color;
+}
+
 .navigation__link {
   .menu-link;
+  display: block;
   letter-spacing: 0.24px;
 }

@@ -7,13 +7,17 @@
     display: block;
     position: absolute;
     right: 0;
-    z-index: 2;
+    z-index: 3;
     width: 12px;
     height: 12px;
     border: none;
     background-color: transparent;
     cursor: pointer;
-    padding: 24px;
+    padding: 30px;
+
+    &:active {
+      background-color: #f0ebff;
+    }
   }
 
   .main-nav__toggle--closed {
@@ -21,7 +25,7 @@
       content: "";
       position: absolute;
       top: 24px;
-      left: 10px;
+      left: 22px;
       width: 16px;
       height: 2px;
       background-color: #333333;
@@ -42,7 +46,7 @@
       content: "";
       position: absolute;
       top: 29px;
-      left: 10px;
+      left: 22px;
       width: 16px;
       height: 2px;
       background-color: #333333;
@@ -77,6 +81,6 @@
 
 @media (min-width: @desktop-width) {
   .main-nav {
-    gap: 161px;
+    gap: 29px;
   }
 }
