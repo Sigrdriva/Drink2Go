@@ -9,6 +9,7 @@
     <link rel="preload" href="fonts/montserratsemibold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/montserratbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/leaflet.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
@@ -450,12 +451,12 @@
         </div>
       </section>
 
-
       <section class="map">
         <h2 class="map__title visually-hidden">Карта. Санкт-Петербург, набережная реки Карповки, дом 5.</h2>
-        <div class="map__wrapper"></div>
+        <div class="map__wrapper" id="map"></div>
       </section>
     </main>
+
     <footer class="main-footer">
       <div class="main-footer__wrapper">
         <a class="main-footer__logo logo" href="#">
@@ -541,8 +542,11 @@
       </div>
 
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./js/for-swiper.js" defer></script>
+    <script src="./js/leaflet.js" defer></script>
+    <script src="./js/for-map.js" defer></script>
     <script src="./js/script.js" defer></script>
   </body>
 </html>
