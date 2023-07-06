@@ -10,7 +10,7 @@ var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')
 map.addLayer(layer);
 
 var iconOptions = {
-  iconUrl: '../img/map-icon.png',
+  iconUrl: 'img/map-icon.png',
   iconSize: [38, 50]
 }
 
